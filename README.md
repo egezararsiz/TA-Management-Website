@@ -9,11 +9,7 @@ This is the repository for the School of Computer Science TA Management website.
 
 ## Project Description
 
-The project involves building a full-stack web application with the following components:
-
-Front-end
-Back-end
-Database
+The project involves building a full-stack web application.
 
 ## Technology Stack
 XAMPP - Bootstrap, CSS, PHP, HTML, JavaScript, SQLite
