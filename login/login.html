@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>XAMPP-Starter Login</title>
+        <meta name="description" content="XAMPP Starter Code for COMP307 Project.">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="xampp, php, perl, apache, mysql, mariadb">
+        <link rel="icon" href="../media/favicon.ico" type="image/ico">
+        <link href="login.css" rel="stylesheet">
+        <script src="login.js"></script>
+    </head>
+
+    <body>
+    <div class="login">
+        <div class="welcome">
+            <form id="login-form" action="javascript:sendLoginRequest()" method="post">
+                <div class="form-inner">
+                  <img class="logo" src="../media/mcgill_logo.png" alt="mcgill-logo" />
+      
+                  <p class="top">Sign in with your email and password.</p>
+      
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="email"
+                      id="email"
+                      onChange=""
+                    />
+                  </div>
+      
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      id="password"
+                      onChange=""
+                    />
+                  </div>
+
+                  <div id="login-error"></div>
+      
+                  <div class="sign-in-button">
+                    <input type="submit" value="Sign in" />
+                  </div>
+      
+                  <p class="bottom">
+                    <a href="../register/register.html" class="links">Register</a>
+                  </p>
+                </div>
+              </form>
+        </div>
+    </div>
+    </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>XAMPP-Starter Register</title>
+        <meta name="description" content="XAMPP Starter Code for COMP307 Project.">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="xampp, php, perl, apache, mysql, mariadb">
+        <link rel="icon" href="../media/favicon.ico" type="image/ico">
+        <link href="register.css" rel="stylesheet">
+        <script src="register.js"></script>
+    </head>
+
+    <body>
+    <div class="login" id="page">
+        <div class="welcome">
+            <form id="register-form" action="javascript:sendRegisterRequest()" method="post">
+                <div class="form-inner">
+                  <img class="logo" src="../media/mcgill_logo.png" alt="mcgill-logo" />
+      
+                  <p class="top">Enter your informations to register.</p>
+      
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="email"
+                      id="email"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="firstname"
+                      placeholder="First Name"
+                      id="firstName"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="lastname"
+                      placeholder="Last Name"
+                      id="lastName"
+                      onChange=""
+                    />
+                  </div>
+      
+                  <div class="form-group">
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      id="password"
+                      onChange=""
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="student_id"
+                      placeholder="Student ID"
+                      id="student_id"
+                      style="display:none"
+                      onChange=""
+                    />
+                  </div>
+
+                  <div >
+                    <label class="container">Student
+                      <input type="checkbox" name="student" id="student" value="1" onchange="showID()">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">TA
+                      <input type="checkbox" name="TA" id="TA" value="1" onchange="showID()">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Professor
+                      <input type="checkbox" name="professor" id="professor" value="1">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">SysOp
+                      <input type="checkbox" name="sysop" id="sysop" value="1">
+                      <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Admin
+                      <input type="checkbox" name="admin" id="admin" value="1">
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+
+                  <div id="register-error" style="color:red"></div>
+      
+ 
+                  <button
+                  type="button"
+                  class="btn btn-light"
+                  id="registerModalButton"
+                  onclick="regButton()"
+                >
+                  Register
+            </button>
+                  <p class="bottom">
+                    <a href="../login/login.html" class="links">Sign in</a>
+                  </p>
+                </div>
+              </form>
+        </div>
+    </div>
+
+    <div id="studentModal" class="our-modal" >
+      <!-- Modal content -->
+      <div class="our-modal-edit-content">
+        <span id="studentModal-close" class="our-modal-close">&times;</span>
+        <form style="height: 100%;overflow:auto" id="studentModal-form" class="user-form" action="javascript:javascript:sendRegisterRequest()" method="post" autocomplete="off">
+          <h3 style="color: black;"> <div id=studentModal-head> Select the courses you are registered in as a student </div> <br /> </h3>
+          <div>
+          <div id = "studentcourses">
+          </div>
+          <br />
+          <div id="studentModal-err">
+          </div>
+            <input id="studentButton" style="position:relative; left:85%; bottom: 100%; cursor: pointer;" type="submit" value="Submit">
+       </div> </form>
+      </div>
+      </div>
+
+
+
+
+
+    </body>
+
+    <script>
+      getCourses();
+    </script>
+</html>

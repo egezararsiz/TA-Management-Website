@@ -1,0 +1,59 @@
+textarea {
+    width:95%;
+    height:5%;
+    border-radius: 5px;
+    resize: none; 
+    position:fixed; 
+    bottom:4px;
+}
+
+button {
+    width:4%;
+     height:5%; 
+    border-radius: 5px;
+    position:fixed; 
+    bottom:4px;
+    right:3px;
+}
+
+@media only screen and (max-width: 900px){
+    textarea {
+        width:88%;
+        height:4%;
+        border-radius: 5px;
+        resize: none; 
+        position:fixed; 
+        bottom:4px;
+    }
+    
+    button {
+        width:10%;
+         height:4%; 
+        border-radius: 5px;
+        position:fixed; 
+        bottom:4px;
+        right:3px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    textarea {
+        width:85%;
+        height:9%;
+        border-radius: 5px;
+        resize: none; 
+        position:fixed; 
+        bottom:4px;
+    }
+    
+    button {
+        width:10%;
+         height:9%; 
+        border-radius: 5px;
+        position:fixed; 
+        bottom:4px;
+        right:3px;
+    }
+}
+
+
